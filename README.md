@@ -56,7 +56,7 @@ The original starter JSON was imported through the ServiceTitan UI and opened su
 - Change SYSTEM TYPE to Heat Pump: photo hidden again.
 - Clear the answer: photo remains hidden.
 
-The rules were exported from ServiceTitan and are included in [the conditional example](examples/service-call-closeout-conditional.json). It uses an InitialLoad/Off rule followed by a Compare/Equals/On rule. Account-specific form IDs and timestamps have been replaced with generic placeholders; unit UUIDs and rule references are preserved.
+The rules were exported from ServiceTitan and are included in [the conditional example](examples/service-call-closeout-conditional.json). It uses an InitialLoad/Off rule followed by a Compare/Equals/On rule. Account-specific form IDs and timestamps have been replaced with generic placeholders; all unit UUIDs have been regenerated and rule references updated consistently. The field structure and conditional behavior are unchanged.
 
 **The exported conditional JSON has not been verified through a fresh reimport.** Browser upload automation blocked that additional test. Open and preview every imported form in your own account before adding triggers. Both examples have no triggers or automatic job-completion email events.
 
