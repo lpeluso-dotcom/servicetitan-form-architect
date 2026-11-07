@@ -1,0 +1,288 @@
+{
+  "FormData": {
+    "id": 1,
+    "name": "Service - Call Closeout",
+    "active": true,
+    "locked": false,
+    "hide": false,
+    "ownerTypes": [
+      "Job"
+    ],
+    "applyTagsTargets": [
+      "Job"
+    ],
+    "showOnMobile": true,
+    "allowEmptyToPresent": false,
+    "canDelete": false,
+    "sendOnEvents": [],
+    "dwyerBigBoardReport": false,
+    "isAprysePdf": false,
+    "createdOn": "2026-11-06T00:00:00.000Z",
+    "modifiedOn": "2026-11-06T00:00:00.000Z",
+    "definition": {
+      "id": 1,
+      "version": 1,
+      "published": true,
+      "printOptions": [
+        "ShowBusinessUnitLogoOnPrintView"
+      ],
+      "definition": {
+        "rootSection": {
+          "unitType": "Section",
+          "canBeDuplicated": false,
+          "units": [
+            {
+              "unitType": "Section",
+              "canBeDuplicated": true,
+              "units": [
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<h3>Service - Call Closeout</h3>",
+                  "header": false,
+                  "isPrintViewOnly": false,
+                  "id": "fd8f197e-1142-4f38-a1f6-5a1560a13326"
+                },
+                {
+                  "fieldType": "Date",
+                  "smartFieldTag": "TodayDate",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "DATE",
+                  "description": "",
+                  "id": "d7660f68-3325-4325-8194-e4d929418f07"
+                },
+                {
+                  "fieldType": "Text",
+                  "smartFieldTag": "CustomerName",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "CUSTOMER NAME",
+                  "description": "",
+                  "id": "7a7d5947-ba9c-4f1b-bdbc-7bf82f61686e"
+                },
+                {
+                  "fieldType": "Text",
+                  "smartFieldTag": "LocationAddress",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "LOCATION",
+                  "description": "",
+                  "id": "f44c249a-7a2b-4783-a13c-024b061a4d45"
+                },
+                {
+                  "fieldType": "Text",
+                  "smartFieldTag": "TechnicianName",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "TECHNICIAN",
+                  "description": "",
+                  "id": "58ea4c78-7c71-4696-9086-6695e2100e49"
+                }
+              ],
+              "name": "Job Context",
+              "id": "9aa39314-842a-4aa8-88c8-70fcffdd7076"
+            },
+            {
+              "unitType": "Section",
+              "canBeDuplicated": true,
+              "units": [
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<h3>Equipment</h3>",
+                  "header": false,
+                  "isPrintViewOnly": false,
+                  "id": "45460804-e5b6-4b2a-91c8-fd40ea1b8b73"
+                },
+                {
+                  "fieldType": "Dropdown",
+                  "values": [
+                    "Gas Furnace + AC",
+                    "Heat Pump",
+                    "Electric Furnace + AC",
+                    "Mini Split",
+                    "Other"
+                  ],
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "SYSTEM TYPE",
+                  "description": "",
+                  "id": "c6c6a611-7cfb-42d1-92a1-c197bec78b0e"
+                },
+                {
+                  "fieldType": "Text",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "EQUIPMENT AGE (YEARS)",
+                  "description": "",
+                  "id": "8eefc1a7-9b3a-469c-929d-da6c4b2c4df4"
+                },
+                {
+                  "fieldType": "Text",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "MODEL / SERIAL NUMBER",
+                  "description": "",
+                  "id": "6885c47d-5a9f-4bc6-832f-c23771e7be85"
+                }
+              ],
+              "name": "Equipment",
+              "id": "606bd560-1933-4150-af49-20643dfb335b"
+            },
+            {
+              "unitType": "Section",
+              "canBeDuplicated": true,
+              "units": [
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<h3>Inspection</h3>",
+                  "header": false,
+                  "isPrintViewOnly": false,
+                  "id": "d1478c12-fe55-4dd4-80a5-19b87be9e76a"
+                },
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<p>Mark each item PASS, FAIL or N/A. Every FAIL needs a note below.</p>",
+                  "header": false,
+                  "isPrintViewOnly": false,
+                  "id": "8336b5b7-1be3-4b68-9a78-47521d007740"
+                },
+                {
+                  "fieldType": "Checkbox",
+                  "values": [
+                    "Passed Inspection",
+                    "Failed Inspection - Attention Required",
+                    "N/A"
+                  ],
+                  "horizontalLayout": false,
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "INSPECT ELECTRICAL CONNECTIONS",
+                  "description": "",
+                  "id": "ce3ca853-fdfb-4360-8022-9aa98580bbff"
+                },
+                {
+                  "fieldType": "Checkbox",
+                  "values": [
+                    "Passed Inspection",
+                    "Failed Inspection - Attention Required",
+                    "N/A"
+                  ],
+                  "horizontalLayout": false,
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "CHECK THERMOSTAT OPERATION",
+                  "description": "",
+                  "id": "abe79232-3914-44b1-87c5-ee6a301c5b53"
+                },
+                {
+                  "fieldType": "Checkbox",
+                  "values": [
+                    "Passed Inspection",
+                    "Failed Inspection - Attention Required",
+                    "N/A"
+                  ],
+                  "horizontalLayout": false,
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "INSPECT AIR FILTER",
+                  "description": "",
+                  "id": "984e0f41-5bfe-404d-866a-0aa5469cd196"
+                },
+                {
+                  "fieldType": "Checkbox",
+                  "values": [
+                    "Passed Inspection",
+                    "Failed Inspection - Attention Required",
+                    "N/A"
+                  ],
+                  "horizontalLayout": false,
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "CLEAR CONDENSATE DRAIN",
+                  "description": "",
+                  "id": "c8585ba0-6f9d-4667-905e-0b0b05b51e7f"
+                },
+                {
+                  "fieldType": "Text",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "SUPPLY AIR TEMP (F)",
+                  "description": "",
+                  "id": "4f146c18-2bc8-4400-913b-cd5c89b95cc3"
+                },
+                {
+                  "fieldType": "Text",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "RETURN AIR TEMP (F)",
+                  "description": "",
+                  "id": "9de07186-4ecc-47e5-8db9-eb0eb530a98e"
+                },
+                {
+                  "fieldType": "Text",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "NOTES ON FAILED ITEMS",
+                  "description": "",
+                  "id": "7a50a541-02b4-4d51-b02d-f75cf72cd690"
+                },
+                {
+                  "fieldType": "Picture",
+                  "unitType": "Field",
+                  "isRequired": false,
+                  "name": "PHOTO OF EQUIPMENT",
+                  "description": "",
+                  "id": "42daaf9a-eac5-4462-be39-1de9bd94e264"
+                }
+              ],
+              "name": "Inspection",
+              "id": "28b72d6a-5974-48cc-b1aa-ff300df2a9fb"
+            },
+            {
+              "unitType": "Section",
+              "canBeDuplicated": true,
+              "units": [
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<h3>Customer Acknowledgment</h3>",
+                  "header": false,
+                  "isPrintViewOnly": false,
+                  "id": "df5a66d6-05ce-4b18-848d-64f7b498e382"
+                },
+                {
+                  "unitType": "StaticElement",
+                  "htmlContent": "<p><strong>Authorization &amp; Acknowledgment</strong></p><p>The customer authorized the work described above and was informed of any findings.</p>",
+                  "header": false,
+                  "isPrintViewOnly": true,
+                  "id": "6bd67edd-25cf-4f1a-9a48-fcacbfd201c2"
+                },
+                {
+                  "fieldType": "Signature",
+                  "refusalReasons": [
+                    "No one available to sign.",
+                    "I am not satisfied with the services received, and wish for an office member to contact me."
+                  ],
+                  "unitType": "Field",
+                  "isRequired": true,
+                  "name": "Your technician has completed the work above. Please sign to confirm the service was completed to your satisfaction.",
+                  "description": "",
+                  "id": "e7b04667-d4e1-4327-80e5-473a370a8a4c"
+                }
+              ],
+              "name": "Customer Acknowledgment",
+              "id": "68686a15-5148-47d4-a6f1-ba104073a67b"
+            }
+          ],
+          "name": "Root",
+          "id": "8386260a-597c-42d9-babb-0a0a72419991"
+        },
+        "hasConditionalLogic": false
+      }
+    },
+    "BusinessUnits": null,
+    "ApplyTagTypes": null
+  },
+  "FormTriggers": [],
+  "IsForm20": true,
+  "IsLocked": false
+}
