@@ -11,6 +11,7 @@ It works with any assistant that accepts custom instructions and reference files
 | `SYSTEM-PROMPT.md` | The instructions. Paste everything below its `---` line into the assistant's instructions field. |
 | `KNOWLEDGE.md` | The reference file: export shape, unit types, smart fields, triggers, conditional logic, and lessons from failed imports. Add it as a reference file. |
 | `examples/service-call-closeout.json` | A sample closeout form the assistant copies structure from. Add it as a reference file. You can also import it into ServiceTitan as a test. |
+| `examples/service-call-closeout-conditional.json` | Example with a tested show/hide rule: show the photo only when SYSTEM TYPE is Other. |
 | `tools/validate_form.py` | Checks a form file against the import-safe rules. Needs Python 3 and nothing else. |
 
 ## Setup
@@ -46,10 +47,29 @@ Test prompt: "Outline a residential AC tune-up form that flags equipment over 10
 - Don't change a form a tech is filling out right now.
 - Most shapes in `KNOWLEDGE.md` come from real exports and imports on a working ServiceTitan account. Where a shape is unverified, the file says so.
 
+## Conditional example and test status
+
+The original starter JSON was imported through the ServiceTitan UI and opened successfully on November 6, 2026. A conditional rule was then added and published in the builder:
+
+- Blank SYSTEM TYPE: PHOTO OF EQUIPMENT hidden.
+- SYSTEM TYPE = Other: photo shown.
+- Change SYSTEM TYPE to Heat Pump: photo hidden again.
+- Clear the answer: photo remains hidden.
+
+The rules were exported from ServiceTitan and are included in [the conditional example](examples/service-call-closeout-conditional.json). It uses an InitialLoad/Off rule followed by a Compare/Equals/On rule. Account-specific form IDs and timestamps have been replaced with generic placeholders; unit UUIDs and rule references are preserved.
+
+**The exported conditional JSON has not been verified through a fresh reimport.** Browser upload automation blocked that additional test. Open and preview every imported form in your own account before adding triggers. Both examples have no triggers or automatic job-completion email events.
+
+To download the whole package, use **Code → Download ZIP**. An IT person can also clone this repository and run the Python validator. The repository does not include credentials or provide access to a ServiceTitan account.
+
+## Credits
+
+Created by **Quality Service Company, LLC (QSC) and Luke Peluso**.
+
 ## Not affiliated with ServiceTitan
 
 This is an independent, community-made method, not an official ServiceTitan tool. ServiceTitan is a trademark of its owner, and nothing here is endorsed by them. ServiceTitan can change its import format at any time, so check every import by opening the form.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT License. Copyright (c) 2026 Quality Service Company, LLC and Luke Peluso. See [LICENSE](LICENSE).
